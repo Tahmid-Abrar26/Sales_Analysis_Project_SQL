@@ -101,13 +101,4 @@ Analysis of customer behavior, retention and lifetime value for an e-commerce co
 - **Database:** PostgreSQL
 - **Analysis Tools:** PostgreSQL
 - **Visualization:** ChatGPT
-```sql
-SELECT
-	cohort_year,
-	COUNT (DISTINCT customerkey) AS total_customers,
-	SUM(total_net_revenue) AS total_revenue,
-	SUM(total_net_revenue) / COUNT (DISTINCT customerkey) AS customer_revenue
-FROM cohort_analysis 
-WHERE orderdate = first_purchase_date
-GROUP BY cohort_year
-```
+
